@@ -1,12 +1,14 @@
 import React from "react"
-import { Text } from "react-native"
+import LogoSvg from "../../assets/logo.svg"
 
-import { Container } from "./styles"
+import { Container, WrapperLogo } from "./styles"
 
 export function Header() {
   return (
     <Container>
-      <Text>Jack</Text>
+      <WrapperLogo>
+        <LogoSvg width={110.34} height={35} />
+      </WrapperLogo>
     </Container>
   )
 }
