@@ -1,16 +1,14 @@
-import React from "react"
 import { StatusBar } from "expo-status-bar"
+import React from "react"
 import { ThemeProvider } from "styled-components/native"
-import  theme  from "./src/global/styles/theme"
-import { Header } from "./src/components/header/Header"
-import { Input } from "./src/components/form/input/Input"
+import theme from "./src/global/styles/theme"
+import Home from "./src/screens/home"
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      <Input />
       <StatusBar style="light" />
+      <Home/>
     </ThemeProvider>
   )
 }
