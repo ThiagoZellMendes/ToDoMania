@@ -1,10 +1,15 @@
 import React from 'react';
 
 import { Container } from './styles';
-import { Props } from './props';
+
 
 export function Input({...rest}) {
   return (
-    <Container {...rest}/>
+    <Container 
+      placeholder={"Adicione uma nova tarefa"}
+      placeholderTextColor={"white"}
+      style={{paddingLeft: 16}}
+    {...rest}
+    />
   )
 }
