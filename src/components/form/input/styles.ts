@@ -5,7 +5,7 @@ import { RFValue } from 'react-native-responsive-fontsize';
 export const Container = styled.TextInput.attrs(
   ({ theme }) => ({
     placeholder: "Adicione uma nova tarefa",
-    placeholderTextColor: theme.colors.baseGray300
+    placeholderTextColor: theme.colors.baseGray300,
   })
 )`
   flex: 1;
