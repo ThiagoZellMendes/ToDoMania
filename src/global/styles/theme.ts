@@ -14,5 +14,8 @@ export default {
     baseGray100:'#F2F2F2', 
     
     feedback: '#E25858',
+  },
+  fonts: {
+    regular: 'Inter_400Regular',
   }
 }
