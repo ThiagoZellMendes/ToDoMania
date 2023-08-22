@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import { Header } from "../../components/header/Header"
 import { Input } from "../../components/form/input/Input"
@@ -9,10 +9,13 @@ import {
   ButtonPlus,
   ContainerButtonPlus,
   Icon,
-  ContainerTasks
+  ContainerTasks,
+  ContainerInformationTask
 } from "./styles"
+import { Text } from "react-native"
 
 export default function Home() {
+  const [isChecked, setIsChecked] = useState(false)
   return (
     <Container>
       <Header />
@@ -25,9 +28,22 @@ export default function Home() {
         </ContainerButtonPlus>
       </ContainerInput>
 
+      <ContainerInformationTask>
+        <Text>Criadas</Text>
+        <Text>Comcluídas</Text>
+      </ContainerInformationTask>
       <ContainerTasks>
         <TaskCard
-          title="Estudar React Native"
+          onValueChange={setIsChecked}
+          isChecked={isChecked}
+          title="Integer urna interdum massa libero auctor neque turpis turpis semper."
+        />
+      </ContainerTasks>
+      <ContainerTasks>
+        <TaskCard
+          onValueChange={setIsChecked}
+          isChecked={isChecked}
+          title="Estudar React Native com estadosEstudar React Native com estadosEstudar React Native com estadosEstudar React Native com estados"
         />
       </ContainerTasks>
     </Container>

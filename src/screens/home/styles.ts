@@ -11,7 +11,7 @@ export const ContainerInput = styled.View`
   flex-direction: row;
   position: absolute;
   margin-top: ${RFPercentage(21)}px;
-  padding: 0 16px;
+  padding: 0 ${RFValue(24)}px;
   align-items: center;
   justify-content: center;
 `
@@ -22,7 +22,7 @@ export const ButtonPlus = styled.TouchableOpacity.attrs({
 })`
   width: ${RFValue(52)}px;
   height: ${RFValue(52)}px;
-  border-radius: 5px;
+  border-radius: ${RFValue(5)}px;
   margin-left: ${RFValue(4)}px;
   background-color: ${({ theme }) => theme.colors.productBlueOne};
   align-items: center;
@@ -32,8 +32,11 @@ export const Icon = styled(Feather)`
   color: ${({ theme }) => theme.colors.baseGray100};
   font-size: ${RFValue(15.97)}px;
 `
+export const ContainerInformationTask = styled.View`
+  flex-direction: row;
+  margin: ${RFValue(32)}px ${RFValue(24)}px ${RFValue(20)}px ${RFValue(24)}px;
+`
 export const ContainerTasks = styled.View`
-  padding: 0 16px;
-  align-items: center;
-  justify-content: center;
+  height: ${RFValue(64)}px;
+  margin: 0 ${RFValue(24)}px;
 `
