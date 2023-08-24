@@ -13,5 +13,5 @@ export const Container = styled.TextInput.attrs(
   font-size: ${RFValue(14)}px;
   border-radius: 5px;
   background-color: ${({theme}) => theme.colors.baseGray500};
-  padding-left: 16px
+  padding-left: ${RFValue(16)}px;
 `;

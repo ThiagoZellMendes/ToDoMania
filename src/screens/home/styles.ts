@@ -11,7 +11,7 @@ export const ContainerInput = styled.View`
   flex-direction: row;
   position: absolute;
   margin-top: ${RFPercentage(21)}px;
-  padding: 0 ${RFValue(24)}px;
+  padding: 0 ${RFValue(16)}px;
   align-items: center;
   justify-content: center;
 `
@@ -34,9 +34,9 @@ export const Icon = styled(Feather)`
 `
 export const ContainerInformationTask = styled.View`
   flex-direction: row;
-  margin: ${RFValue(32)}px ${RFValue(24)}px ${RFValue(20)}px ${RFValue(24)}px;
+  justify-content: space-between;
+  margin: ${RFValue(55)}px ${RFValue(16)}px ${RFValue(20)}px ${RFValue(16)}px;
 `
 export const ContainerTasks = styled.View`
-  height: ${RFValue(64)}px;
-  margin: 0 ${RFValue(24)}px;
+  margin: 0 ${RFValue(16)}px;
 `

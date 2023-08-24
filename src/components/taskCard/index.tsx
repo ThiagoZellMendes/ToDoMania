@@ -1,38 +1,39 @@
-import React, { useState } from "react"
+import React from "react"
 
+import { PropsTaskCard } from "./props"
 import {
+  CheckboxCard,
   Container,
+  ContainerCheckbox,
+  ContainerText,
   Icon,
   TextCards,
   TrashContainerButton,
-  CheckboxCard,
-  ContainerText,
-  ContainerContent,
-  ContainerCheckbox,
 } from "./styles"
-import { PropsTaskCard } from "./props"
 
 export function TaskCard({ title, isChecked, ...rest }: PropsTaskCard) {
-  function filterTitleLength(desc: string) {
-    if(desc.length < 22){
-        return desc;
-}
+  function filterTitleLength(title: string) {
+    if (title.length < 60) {
+      return title
+    }
 
-    return `${desc.substring(0, 55)}...`;
-} 
+    return `${title.substring(0, 67)}...`
+  }
   return (
     <Container>
-      <ContainerContent>
-        <ContainerCheckbox>
-          <CheckboxCard value={isChecked} {...rest} />
-        </ContainerCheckbox>
-        <ContainerText>
-          <TextCards>{filterTitleLength(title) }</TextCards>
-        </ContainerText>
-        <TrashContainerButton>
-          <Icon name="trash" />
-        </TrashContainerButton>
-      </ContainerContent>
+      <ContainerCheckbox>
+        <CheckboxCard
+          value={isChecked}
+          style={{ borderRadius: 50 }}
+          {...rest}
+        />
+      </ContainerCheckbox>
+      <ContainerText>
+        <TextCards>{filterTitleLength(title)}</TextCards>
+      </ContainerText>
+      <TrashContainerButton>
+        <Icon name="trash" />
+      </TrashContainerButton>
     </Container>
   )
 }

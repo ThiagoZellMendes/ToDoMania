@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import { Header } from "../../components/header/Header"
 import { Input } from "../../components/form/input/Input"
 import { TaskCard } from "../../components/taskCard"
+import { CountTask } from "../../components/countTask"
 import {
   Container,
   ContainerInput,
@@ -10,12 +11,12 @@ import {
   ContainerButtonPlus,
   Icon,
   ContainerTasks,
-  ContainerInformationTask
+  ContainerInformationTask,
 } from "./styles"
-import { Text } from "react-native"
 
 export default function Home() {
   const [isChecked, setIsChecked] = useState(false)
+  console.log(isChecked)
   return (
     <Container>
       <Header />
@@ -29,8 +30,8 @@ export default function Home() {
       </ContainerInput>
 
       <ContainerInformationTask>
-        <Text>Criadas</Text>
-        <Text>Comcluídas</Text>
+        <CountTask title="Criadas" count={2} type="create" />
+        <CountTask title="Concluídas" count={2} type="Finish" />
       </ContainerInformationTask>
       <ContainerTasks>
         <TaskCard
@@ -42,8 +43,8 @@ export default function Home() {
       <ContainerTasks>
         <TaskCard
           onValueChange={setIsChecked}
+          title="Estudar React Native"
           isChecked={isChecked}
-          title="Estudar React Native com estadosEstudar React Native com estadosEstudar React Native com estadosEstudar React Native com estados"
         />
       </ContainerTasks>
     </Container>
